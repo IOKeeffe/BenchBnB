@@ -8,6 +8,7 @@
 #  session_token   :string           not null
 #  created_at      :datetime         not null
 #  updated_at      :datetime         not null
+#  admin           :boolean          default("false")
 #
 
 class User < ApplicationRecord
@@ -28,7 +29,7 @@ class User < ApplicationRecord
   end
 
   def is_admin?
-
+    self.admin
   end
 
   def password=(password)
