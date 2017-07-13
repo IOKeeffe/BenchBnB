@@ -5,6 +5,7 @@ export const signUp = (user) => {
     data: {user},
   });
 };
+
 export const logIn = (user) => {
   $.ajax({
     method: 'POST',
@@ -12,6 +13,7 @@ export const logIn = (user) => {
     data: {user},
   });
 };
+
 export const logOut = () => {
   $.ajax({
     method: 'DELETE',
