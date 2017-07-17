@@ -22,11 +22,11 @@ export const signUp = (user) => dispatch => {
 };
 
 export const receiveCurrentUser = (user) => ({
-  type = RECEIVE_CURRENT_USER,
+  type: RECEIVE_CURRENT_USER,
   user,
 })
 
 export const receiveErrors = (errors) => ({
-  type = RECEIVE_ERRORS,
+  type: RECEIVE_ERRORS,
   errors,
 })
