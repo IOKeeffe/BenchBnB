@@ -12,12 +12,12 @@ document.addEventListener('DOMContentLoaded', () => {
     store = configureStore(preloadedState);
   }
   else {
-    store = configureStore();
+    store = configureStore({});
   }
   window.getState = store.getState;
   window.dispatch = store.dispatch;
   window.login = logIn;
   window.logout = logOut;
   window.signup = signUp;
-  ReactDOM.render(<Root store={store} />,, root);
+  ReactDOM.render(<h1> </h1>, root);
 });
