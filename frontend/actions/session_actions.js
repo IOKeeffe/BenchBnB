@@ -12,7 +12,7 @@ export const logIn = (user) => dispatch => {
 export const logOut = () => dispatch => {
   return SessionApiUtil.logOut()
   .then(user => { return dispatch(receiveCurrentUser(null));},
-        errors => {dispatch(receiveErrors(errors));});
+        errors => {dispatch(receiveErrors(errors.responseJSON));});
 };
 
 export const signUp = (user) => dispatch => {
