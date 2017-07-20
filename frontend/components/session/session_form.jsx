@@ -1,9 +1,7 @@
-import SessionForm from './session_form';
-import { connect } from 'react-redux';
-import { signUp, logIn } from '../../actions/session_actions';
+import React from 'react';
 
-const mapStateToProps = (state) => {
-  return {
-    
-  }
-}
+const SessionForm = ({currentUser, logOut}) => (
+   currentUser ? personalGreeting(currentUser, logOut) : sessionLinks()
+);
+
+export default SessionForm;
