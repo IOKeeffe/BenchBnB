@@ -8,5 +8,12 @@ class SessionForm extends React.Component {
       password: ""
     };
   }
+
+  render() {
+    return (
+      <form>
+      </form>
+    )
+  }
 }
 export default SessionForm;
