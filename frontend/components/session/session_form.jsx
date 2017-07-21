@@ -1,7 +1,12 @@
 import React from 'react';
 
-const SessionForm = ({currentUser, logOut}) => (
-   <div></div>
-);
-
+class SessionForm extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      username: "",
+      password: ""
+    };
+  }
+}
 export default SessionForm;
