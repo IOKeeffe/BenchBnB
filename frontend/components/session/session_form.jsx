@@ -9,9 +9,15 @@ class SessionForm extends React.Component {
     };
   }
 
+  handleSubmit(e) {
+    e.preventDefault();
+    const user = this.state;
+    this.props.logIn(user);
+  }
+
   render() {
     return (
-      <form>
+      <form className="sign-up-form" onSubmit={this.handleSubmit}>
       </form>
     )
   }
