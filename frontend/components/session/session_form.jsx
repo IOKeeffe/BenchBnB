@@ -18,6 +18,7 @@ class SessionForm extends React.Component {
   render() {
     return (
       <form className="sign-up-form" onSubmit={this.handleSubmit}>
+      <input></input>
       </form>
     )
   }
