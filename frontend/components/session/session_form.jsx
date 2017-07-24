@@ -11,15 +11,19 @@ class SessionForm extends React.Component {
 
   handleSubmit(e) {
     e.preventDefault();
-    const user = this.state;
-    this.props.logIn(user);
+    const user = Object.assign({}, this.state);
+    this.props.processForm(user);
   }
 
   render() {
     return (
-      <form className="sign-up-form" onSubmit={this.handleSubmit}>
-      <input></input>
-      </form>
+      <div>
+        <h1>{this.props.formType}</h1>
+        <form className="sign-up-form" onSubmit={this.handleSubmit}>
+
+          <input type="text"></input>
+        </form>
+      </div>
     )
   }
 }

@@ -10,10 +10,11 @@ const mapStateToProps = (state, ownProps) => {
   }
 }
 
-const mapDispatchToProps = (dispatch) => {
+const mapDispatchToProps = (dispatch, ownProps) => {
+  let dispatchLogIn = (user) => (dispatch(logIn(user)));
+  let dispatchSignUp = (user) => (dispatch(signUp(user)));
   return {
-    logIn: user => (dispatch(logIn(user))),
-    signUp: user => (dispatch(signUp(user))),
+    processForm: ownProps.location.pathname === "/login" ? dispatchLogIn : dispatchSignUp,
   }
 }
 
