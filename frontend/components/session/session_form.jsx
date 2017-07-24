@@ -3,6 +3,7 @@ import React from 'react';
 class SessionForm extends React.Component {
   constructor(props) {
     super(props);
+    this.handleSubmit = this.handleSubmit.bind(this);
     this.state = {
       username: "",
       password: ""
@@ -10,6 +11,7 @@ class SessionForm extends React.Component {
   }
 
   handleSubmit(e) {
+    debugger;
     e.preventDefault();
     const user = Object.assign({}, this.state);
     this.props.processForm(user);
@@ -34,13 +36,13 @@ class SessionForm extends React.Component {
              />
           </label>
           <label>Password:
-          <input type="text"
+          <input type="password"
                  className="password"
                  value={this.state.password}
                  onChange={this.update('password')}
            />
           </label>
-          <input type="submit" id="submit-  button"></input>
+          <input type="submit" id="submit-button"></input>
         </form>
       </div>
     )
