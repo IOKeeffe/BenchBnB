@@ -24,7 +24,6 @@ class SessionForm extends React.Component {
   }
 
   renderOtherForm() {
-    debugger;
     let otherForm = this.props.formType === "login" ? "/signup" : "/login";
     return (
       <Link to={otherForm}>{this.props.otherFormName}</Link>
