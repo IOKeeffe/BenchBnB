@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 class SessionForm extends React.Component {
   constructor(props) {
@@ -22,10 +23,19 @@ class SessionForm extends React.Component {
     });
   }
 
+  renderOtherForm() {
+    debugger;
+    let otherForm = this.props.formType === "login" ? "/signup" : "/login";
+    return (
+      <Link to={otherForm}>{this.props.otherFormName}</Link>
+    );
+  }
+
   render() {
     return (
       <div>
-        <h1>{this.props.formType}</h1>
+        <h1>{this.props.formName}</h1>
+        <h2>Did you mean to {this.renderOtherForm()}?</h2>
         <form className="sign-up-form" onSubmit={this.handleSubmit}>
           <label>User name:
             <input type="text"

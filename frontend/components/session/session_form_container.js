@@ -6,7 +6,9 @@ const mapStateToProps = (state, ownProps) => {
   return {
     loggedIn: Boolean(state.session.currentUser),
     errors: state.session.errors,
-    formType: String(ownProps.location.pathname === "/login" ? "login" : "signup")
+    formType: String(ownProps.location.pathname === "/login" ? "login" : "signup"),
+    formName: ownProps.location.pathname === "/login" ? "Sign Up" : "Log In",
+    otherFormName: ownProps.location.pathname === "/login" ? "Sign Up" : "Log In",
   }
 }
 
