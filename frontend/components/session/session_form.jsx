@@ -23,7 +23,7 @@ class SessionForm extends React.Component {
     });
   }
 
-  renderOtherForm() {
+  renderOtherFormLink() {
     let otherForm = this.props.formType === "login" ? "/signup" : "/login";
     return (
       <Link to={otherForm}>{this.props.otherFormName}</Link>
@@ -34,7 +34,7 @@ class SessionForm extends React.Component {
     return (
       <div>
         <h1>{this.props.formName}</h1>
-        <h2>Did you mean to {this.renderOtherForm()}?</h2>
+        <h2>Did you mean to {this.renderOtherFormLink()}?</h2>
         <form className="sign-up-form" onSubmit={this.handleSubmit}>
           <label>User name:
             <input type="text"
