@@ -12,7 +12,7 @@ document.addEventListener('DOMContentLoaded', () => {
     store = configureStore(preloadedState);
   }
   else {
-    store = configureStore({});
+    store = configureStore();
   }
   window.getState = store.getState;
   window.logIn = logIn;

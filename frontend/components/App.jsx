@@ -16,9 +16,6 @@ import GreetingContainer from './greeting/greeting_container';
 const App = () => (
   <div>
     <header>
-      <h1>
-        Hi
-      </h1>
       <GreetingContainer />
     </header>
     <Switch>
