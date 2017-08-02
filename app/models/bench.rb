@@ -6,14 +6,15 @@
 #  description :string           not null
 #  lat         :float            not null
 #  lon         :float            not null
+#  owner_id    :integer          not null
 #
 
 class Bench < ApplicationRecord
   validates :description, :lat, :lon, presence: true
-  
+
   belongs_to :owner,
     class_name: "User",
-    foreign_key: owner_id,
-    primary_key: id
+    foreign_key: "owner_id",
+    primary_key: "id"
 
 end

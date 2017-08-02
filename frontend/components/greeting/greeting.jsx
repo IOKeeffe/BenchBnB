@@ -11,7 +11,7 @@ const sessionLinks = () => (
 
 const personalGreeting = (currentUser, logOut) => (
   <div className="personal-greeting">
-    <h2>Hi, {currentUser.username} </h2>
+    <h2>Hi, {currentUser.username}</h2>
     <button className="header-button" onClick={logOut}>Log Out</button>
   </div>
 );

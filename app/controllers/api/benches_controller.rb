@@ -3,8 +3,8 @@ class Api::BenchesController < ApplicationController
 
   end
 
-  def update
-
+  def index
+    @benches = Bench.all
   end
 
   def new

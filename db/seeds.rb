@@ -5,18 +5,28 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
-
-benches = {
-  1: {
+Bench.delete_all
+benches = [
+  {
+    description: "A bench",
     lat: 37.752651,
-    lon: -122.459065
+    lon: -122.459065,
+    owner_id: User.all.sample.id
   },
-  2: {
+  {
+    description: "Another bench",
     lat: 37.753657,
-    lon:-122.446444
+    lon:-122.446444,
+    owner_id: User.all.sample.id
   },
-  3: {
-      lat: 37.793875,
-      lon:-122.464075
+  {
+    description: "A third bench",
+    lat: 37.793875,
+    lon:-122.464075,
+    owner_id: User.all.sample.id
     }
-}
+]
+
+benches.each do |bench|
+  Bench.create!(bench)
+end
