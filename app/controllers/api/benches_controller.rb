@@ -1,10 +1,11 @@
 class Api::BenchesController < ApplicationController
   def create
-
+    @bench = Bench.create!(bench_params)
+    render :show
   end
 
   def show
-    @bench = Bench.find_by(id: params[:id])
+    @bench = Bench.find(params[:id])
   end
 
   def index
