@@ -9,6 +9,8 @@ const Root = ({store}) => {
     <Provider store={ store }>
     <HashRouter>
       <App />
+
+      <ProtectedRoute path="/benches/index" component={BenchIndexContainer} />
     </HashRouter>
     </Provider>
   );
