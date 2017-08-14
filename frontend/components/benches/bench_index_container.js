@@ -4,6 +4,7 @@ import { fetchBenches } from '../actions/bench_actions';
 const mapStateToProps = (state, ownProps) => {
   return {
     benches: state.benches.benches,
+    fetching: state.benches.fetching,
     errors: state.benches.errors,
   };
 }
