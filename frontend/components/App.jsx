@@ -11,6 +11,7 @@ import { AuthRoute, ProtectedRoute } from '../util/route_util';
 
 import SessionFormContainer from './session/session_form_container';
 import GreetingContainer from './greeting/greeting_container';
+import BenchIndexContainer from './benches/bench_index_container';
 
 
 const App = () => (
@@ -20,8 +21,9 @@ const App = () => (
     </header>
     <Switch>
       <AuthRoute path="/login" component={SessionFormContainer} />
-      <AuthRoute path="/signup" component={SessionFormContainer} />
+      <AuthRoute path="/signup  " component={SessionFormContainer} />
     </Switch>
+    <Route path="/benches/index" component={BenchIndexContainer} />
   </div>
 );
 

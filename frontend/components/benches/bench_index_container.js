@@ -1,10 +1,11 @@
 import { connect } from 'react-redux';
-import { fetchBenches } from '../actions/bench_actions';
+import { fetchBenches } from '../../actions/bench_actions';
+import BenchIndex from './bench_index';
 
 const mapStateToProps = (state, ownProps) => {
   return {
     benches: state.benches.benches,
-    fetching: state.benches.fetching,
+    loading: state.loading.currentlyLoading,
     errors: state.benches.errors,
   };
 }
