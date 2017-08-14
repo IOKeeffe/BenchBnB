@@ -5,6 +5,6 @@ import LoadingReducer from './loading_reducer';
 
 export default combineReducers({
   session: SessionReducer,
-  benches: BenchesReducer,
   loading: LoadingReducer,
+  benches: BenchesReducer,
 });

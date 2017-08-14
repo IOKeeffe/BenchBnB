@@ -3,22 +3,23 @@ import React from 'react';
 class BenchIndex extends React.Component {
   constructor(props) {
     super(props);
-    console.log(this.props.loading);
+    this.displayBenches = this.displayBenches.bind(this);
   }
 
   componentDidMount() {
     this.props.fetchBenches();
-    console.log(this.props.loading);
   }
 
   renderLoading() {
-    // if(this.props.loading)
+  }
+
+  displayBenches() {
   }
 
   render() {
     return (
       <div>
-        {this.renderLoading}
+        {this.displayBenches()}
         <h1>hi</h1>
       </div>
     )

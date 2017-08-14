@@ -9,9 +9,6 @@ const BenchesReducer = (oldState = {}, action) => {
       case RECEIVE_BENCHES:
         newState.benches = action.benches;
         return newState;
-      case FETCHING_BENCHES:
-        newState.fetching = action.fetching;
-        return newState;
 
       default: return newState;
     }
