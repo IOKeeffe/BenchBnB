@@ -13,6 +13,7 @@ const LoadingReducer = (oldState = {currentlyLoading: false}, action) => {
     case RECEIVE_BENCHES:
       newState.currentlyLoading = false;
       return newState;
+    case "CASE":
     default:
       return newState;
   }
